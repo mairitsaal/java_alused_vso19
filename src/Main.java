@@ -3,20 +3,16 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
-        int sum = 0;
-        while (true) {
-            int read = Integer.parseInt(reader.nextLine());
-            if (read == 0) {
-                break;
-            }
+        System.out.println("Your age: ");
+        int number = Integer.parseInt(reader.nextLine()); // Reads a string variable from the keyboard and transfers it to an integer
 
-            // DO SOMETHING HERE
-            sum = sum + read; // sum += read;
-
-            System.out.println("Sum now: " + sum);
+        if (number >= 0 && number <= 120) {
+            System.out.println("Ok");
+        } else {
+            System.out.println("Impossible!");
         }
 
-        System.out.println("Sum in the end: " + sum);
+
     }
 }
     
