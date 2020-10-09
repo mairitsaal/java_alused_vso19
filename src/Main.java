@@ -1,6 +1,14 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.print("Mairit Saal");
+        Scanner reader = new Scanner(System.in);
+
+
+        System.out.print("Type the radius: ");
+        int radius = Integer.parseInt(reader.nextLine());
+        System.out.println("Circumference of the circle: " + 2 * Math.PI * radius);
+
     }
 }
     
