@@ -3,13 +3,13 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
-        System.out.println("Your age: ");
-        int number = Integer.parseInt(reader.nextLine()); // Reads a string variable from the keyboard and transfers it to an integer
+        System.out.println("Type a year: ");
+        int year = Integer.parseInt(reader.nextLine()); // Reads a string variable from the keyboard and transfers it to an integer
 
-        if (number >= 0 && number <= 120) {
-            System.out.println("Ok");
+        if (year % 4 ==0 || year % 100 == 0 &&  year % 400 == 0) {
+            System.out.println("The year is a leap year.");
         } else {
-            System.out.println("Impossible!");
+            System.out.println("The year is not a leap year.");
         }
 
 
