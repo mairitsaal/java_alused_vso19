@@ -2,18 +2,13 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner reader = new Scanner(System.in);
-        System.out.print("Type the password: ");
-        String password = reader.nextLine();
-        while(!password.equals("carrot")){
-            System.out.println("Wrong!");
-            System.out.print("Type the password: ");
-            password = reader.nextLine();
+        int number = 2;
+        while (number <= 100) {
+            if (number % 2 == 0){
+                System.out.println(number);
+            }
+            number ++;
         }
-        System.out.println("Right!");
-        System.out.println();
-        System.out.println("The secret is: jryy qbar!");
-
 
     }
 }
