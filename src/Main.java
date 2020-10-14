@@ -1,13 +1,21 @@
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+        private static void printStars(int amount) {
+            // you can print one star with the command
+            //System.out.print("*");
+            int howManyTimes = 1;
+            while (howManyTimes <= amount) {
+                System.out.print("*");
+                howManyTimes++;
+            }
+            System.out.println();
+        }
 
-        printText();
-    }
-
-    public static void printText() {
-        System.out.println("In the beginning there were the swamp, the hoe and Java.");
-    }
+        public static void main(String[] args) {
+            printStars(5);
+            printStars(3);
+            printStars(9);
+        }
 }
 
