@@ -8,14 +8,15 @@ public class Main {
         //int numbers = Integer.parseInt(reader.nextLine());
         //int i = 1;//it should be i = 1; and not i = 0;
         //while (i <= numbers) {
-          //  i++;
+        //  i++;
 
         printStars(5);
         System.out.println();
         printStars(3);
         System.out.println();
-        printStars(9);
-        }
+        printSquare(2);
+
+    }
 
 
     private static void printStars(int amount) {
@@ -23,9 +24,19 @@ public class Main {
         for (int i = 0; i < amount; i++) {
             System.out.print("*");
         }
-        // call this command amount times
+        System.out.println();
+        // reavahetus
 
     }
+
+    private static void printSquare(int sideSize) {
+        // you can print one star with the command
+        for (int i = 0; i < sideSize; i++) {
+            printStars(sideSize);
+
         }
+        // call this command amount times
+    }
+}
 
 
