@@ -14,7 +14,9 @@ public class Main {
         printStars(3);
         printSquare(2);
         System.out.println();
-        printRectangle(3,2);
+        printRectangle(3, 2);
+        System.out.println();
+        printTriangle(4);
 
     }
 
@@ -37,13 +39,19 @@ public class Main {
         }
         // call this command amount times
     }
-    private static void printRectangle(int width, int height){
-        for (int i=0; i<height; i++){
+
+    private static void printRectangle(int width, int height) {
+        for (int i = 0; i < height; i++) {
             printStars(width);
         }
     }
 
+    private static void printTriangle(int size) {
+        for (int i = 0; i < size; i++) {
+            printStars(i);
+        }
     }
+}
 
 
 
