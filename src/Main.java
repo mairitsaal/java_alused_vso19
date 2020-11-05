@@ -1,57 +1,32 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
 
-        //Scanner reader = new Scanner(System.in);
-        //System.out.print("How many: ");
-        //int numbers = Integer.parseInt(reader.nextLine());
-        //int i = 1;//it should be i = 1; and not i = 0;
-        //while (i <= numbers) {
-        //  i++;
+        Scanner reader = new Scanner(System.in);
 
-        printStars(5);
-        printStars(3);
-        printSquare(2);
-        System.out.println();
-        printRectangle(3, 2);
-        System.out.println();
-        printTriangle(4);
+        int numberDrawn = drawNumber();
 
-    }
+        int userNumber = 0;
 
-
-    private static void printStars(int amount) {
-        // you can print one star with the command
-        for (int i = 0; i < amount; i++) {
-            System.out.print("*");
+        while (true) {
+            System.out.print("Guess a number: ");
+            userNumber = Integer.parseInt(reader.nextLine());
+            if (userNumber == numberDrawn){
+                System.out.println("Congratulations, your guess is correct!");
+                break;
+            } else if(userNumber < numberDrawn) {
+                System.out.println("The number is greater, guesses made: " + userNumber);
+            } else {
+                System.out.println("The number is lesser, guesses made: " + userNumber);
+            }
         }
-        System.out.println();
-        // reavahetus
-
-    }
-
-    private static void printSquare(int sideSize) {
-        // you can print one star with the command
-        for (int i = 0; i < sideSize; i++) {
-            printStars(sideSize);
-
         }
-        // call this command amount times
-    }
 
-    private static void printRectangle(int width, int height) {
-        for (int i = 0; i < height; i++) {
-            printStars(width);
-        }
-    }
-
-    private static void printTriangle(int size) {
-        for (int i = 0; i < size; i++) {
-            printStars(i);
-        }
+    private static int drawNumber() {
+        return new Random().nextInt(101);
     }
 }
-
 
 
