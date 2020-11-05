@@ -11,10 +11,10 @@ public class Main {
         //  i++;
 
         printStars(5);
-        System.out.println();
         printStars(3);
-        System.out.println();
         printSquare(2);
+        System.out.println();
+        printRectangle(3,2);
 
     }
 
@@ -37,6 +37,13 @@ public class Main {
         }
         // call this command amount times
     }
-}
+    private static void printRectangle(int width, int height){
+        for (int i=0; i<height; i++){
+            printStars(width);
+        }
+    }
+
+    }
+
 
 
