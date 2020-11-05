@@ -5,16 +5,11 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner reader = new Scanner(System.in);
-        System.out.println("What is your name: ");
-        String name = reader.nextLine();
+        System.out.println("Type a word: ");
+        String word = reader.nextLine();
 
-        char character = name.charAt(0);
-
-        System.out.println("1. character: " + character);
-        char character2 = name.charAt(1);
-        System.out.println("2. character: " + character2);
-        char character3 = name.charAt(2);
-        System.out.println("3. character: " + character3);
+        System.out.println("Length of the first part: " + word.substring(0,4));
+        System.out.println("Length of the first part: " + word.substring(0,6));
 
     }
 
