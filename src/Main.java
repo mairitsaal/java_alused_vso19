@@ -2,26 +2,21 @@ import java.util.*;
 
 
 public class Main {
-    public static void removeLast(ArrayList<String> list) {
-        list.remove(list.size() - 1);
+    public static double average(ArrayList<Integer> list) {
+        int sum = 0;
+        for (Integer number : list) {
+            sum = sum + number;
+        }
+        return (double) sum / list.size();
     }
 
     public static void main(String[] args) {
-        ArrayList<String> brothers = new ArrayList<String>();
-        brothers.add("Dick");
-        brothers.add("Henry");
-        brothers.add("Michael");
-        brothers.add("Bob");
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        list.add(3);
+        list.add(2);
+        list.add(7);
+        list.add(2);
 
-        System.out.println("brothers: "+ brothers);
-
-// sorting brothers
-        Collections.sort(brothers);
-
-
-// removing the last item
-        removeLast(brothers);
-
-        System.out.println("without the last brother: " + brothers);
+        System.out.println("The average is: " + average(list));
     }
 }
