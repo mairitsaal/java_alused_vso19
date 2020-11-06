@@ -12,16 +12,13 @@ public class Main {
         while (true) {
             System.out.print("Type a word: ");
             String word = reader.nextLine();
-            if (word.isEmpty()) {
-                break;
+            if (words.contains(word)) {
+                System.out.println("You gave the word " + word + " twice");
             } else {
                 words.add(word);
             }
         }
 
-        System.out.println("You typed the following words:");
-        for (String word : words) {
-            System.out.println(word);
-        }
+
     }
 }
