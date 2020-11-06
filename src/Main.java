@@ -2,21 +2,25 @@ import java.util.*;
 
 
 public class Main {
-    public static double average(ArrayList<Integer> list) {
-        int sum = 0;
+
+    public static int greatest(ArrayList<Integer> list) {
+        int greatestNumber = list.get(0);
         for (Integer number : list) {
-            sum = sum + number;
+            if (number > greatestNumber) {
+                greatestNumber = number;
+            }
         }
-        return (double) sum / list.size();
-    }
+            return greatestNumber;
+        }
 
-    public static void main(String[] args) {
-        ArrayList<Integer> list = new ArrayList<Integer>();
-        list.add(3);
-        list.add(2);
-        list.add(7);
-        list.add(2);
+        public static void main(String[] args) {
+            ArrayList<Integer> list = new ArrayList<Integer>();
+            list.add(3);
+            list.add(2);
+            list.add(7);
+            list.add(9);
 
-        System.out.println("The average is: " + average(list));
+            System.out.println("The greatest number is: " + greatest(list));
+        }
+
     }
-}
