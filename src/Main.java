@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Random;
 
@@ -6,21 +7,21 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner reader = new Scanner(System.in);
-        System.out.println("Type a word: ");
-        String text = reader.nextLine();
+        ArrayList<String> words = new ArrayList<String>();
 
-
-        System.out.println("In reverse order: " + reverse(text));
-
-    }
-    public static String reverse(String text) {
-        String help = "";
-
-        for(int i=text.length()-1; i>=0; i--){ //sõna lõppu
-            help = help + text.charAt(i);
+        while (true) {
+            System.out.print("Type a word: ");
+            String word = reader.nextLine();
+            if (word.isEmpty()) {
+                break;
+            } else {
+                words.add(word);
+            }
         }
-        return help;
+
+        System.out.println("You typed the following words:");
+        for (String word : words) {
+            System.out.println(word);
+        }
     }
-
-
 }
