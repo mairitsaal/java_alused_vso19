@@ -1,38 +1,36 @@
 import java.util.*;
 
-public class Main {
-    public static void main(String[] args) throws Exception {
-        BoundedCounter seconds = new BoundedCounter(59);
-        BoundedCounter minutes = new BoundedCounter(59);
-        BoundedCounter hours = new BoundedCounter(23);
+    public class Main {
+        public static void main(String[] args) throws Exception {
+            NumberStatistics stats = new NumberStatistics();
 
-        Scanner reader = new Scanner(System.in);
+            NumberStatistics allNumbers = new NumberStatistics();
+            NumberStatistics evenNumbers = new NumberStatistics();
+            NumberStatistics oddNumbers = new NumberStatistics();
 
-        System.out.print("seconds: ");
-        int s = Integer.parseInt(reader.nextLine()); // read the initial value of seconds from the user
-        System.out.print("minutes: ");
-        int m = Integer.parseInt(reader.nextLine());// read the initial value of minutes from the user
-        System.out.print("hours: ");
-        int h = Integer.parseInt(reader.nextLine());// read the initial value of hours from the user
+            stats.addNumber(3);
+            stats.addNumber(5);
+            stats.addNumber(1);
+            stats.addNumber(2);
+            System.out.println("Amount: " + stats.amountOfNumbers());
+            System.out.println("sum: " + stats.sum());
+            System.out.println("average: " + stats.average());
 
-        seconds.setValue(s);
-        minutes.setValue(m);
-        hours.setValue(h);
-
-        while (true) {
-            System.out.println(hours + ":" + minutes + ":" + seconds);
-            Thread.sleep(1000);
-            // like in previous but seconds taken into account
-            seconds.next();
-            if (seconds.getValue() == 0) {
-                minutes.next();
-                if (minutes.getValue() == 0) {
-                    hours.next();
+            Scanner reader = new Scanner(System.in);
+            System.out.println("Type numbers:");
+            int number = Integer.parseInt(reader.nextLine());
+            while(number != -1){
+                allNumbers.addNumber(number);
+                if(number % 2 == 0){
+                    evenNumbers.addNumber(number);
+                } else {
+                    oddNumbers.addNumber(number);
                 }
+
+                number = Integer.parseInt(reader.nextLine());
             }
+            System.out.println("sum: " + allNumbers.sum());
+            System.out.println("sum of even: " + evenNumbers.sum());
+            System.out.println("sum of odd: " + oddNumbers.sum());
         }
     }
-}
-
-
-
