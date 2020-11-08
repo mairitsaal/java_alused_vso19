@@ -32,5 +32,12 @@ public class Person {
     public String toString() {
         return this.name +", born "+ this.birthday;
     }
+    public boolean olderThan(Person compared) {
+        // compare the ages based on birthdate
+        if (this.birthday.earlier(compared.birthday)) {
+            return false;
+        }
+        return true;
+    }
 }
   
