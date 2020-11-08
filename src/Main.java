@@ -8,5 +8,9 @@ import java.util.*;
 
             System.out.println(studioManhattan.larger(twoRoomsBrooklyn));
             System.out.println(fourAndKitchenBronx.larger(studioManhattan));
+
+            System.out.println(studioManhattan.priceDifference(fourAndKitchenBronx));
+            System.out.println(fourAndKitchenBronx.priceDifference(studioManhattan));
+            System.out.println(twoRoomsBrooklyn.priceDifference(studioManhattan));
         }
     }
