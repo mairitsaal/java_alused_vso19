@@ -38,6 +38,17 @@ public class Person {
             return false;
         }
         return true;
+
+    }
+    public Person(String name, MyDate birthday){
+        this.name = name;
+        this.birthday = birthday;
+    }
+    public Person(String name){
+        this.name = name;
+        this.birthday = new MyDate(Calendar.getInstance().get(Calendar.DATE),
+                Calendar.getInstance().get(Calendar.MONTH) + 1,
+                Calendar.getInstance().get(Calendar.YEAR));
     }
 }
   
