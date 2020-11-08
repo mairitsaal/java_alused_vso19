@@ -2,22 +2,11 @@ import java.util.*;
 
     public class Main {
         public static void main(String[] args) {
-            CashRegister unicafeExactum = new CashRegister();
-            System.out.println( unicafeExactum );
+            Apartment studioManhattan = new Apartment(1, 16, 5500);
+            Apartment twoRoomsBrooklyn = new Apartment(2, 38, 4200);
+            Apartment fourAndKitchenBronx = new Apartment(3, 78, 2500);
 
-            LyyraCard cardOfMairit = new LyyraCard(70);
-
-            System.out.println("the card balance " +cardOfMairit.balance() + "euros");
-            boolean succeeded = unicafeExactum.payGourmet(cardOfMairit);
-            System.out.println("payment success: " + succeeded);
-
-            unicafeExactum.loadMoneyToCard(cardOfMairit, 10);
-
-            succeeded = unicafeExactum.payEconomical(cardOfMairit);
-            System.out.println("payment success: "+ succeeded);
-
-            System.out.println("the card balance " +cardOfMairit.balance() + "euros");
-
-            System.out.println( unicafeExactum );
+            System.out.println(studioManhattan.larger(twoRoomsBrooklyn));
+            System.out.println(fourAndKitchenBronx.larger(studioManhattan));
         }
     }
