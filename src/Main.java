@@ -2,19 +2,9 @@ import java.util.*;
 
     public class Main {
         public static void main(String[] args) {
-            Apartment studioManhattan = new Apartment(1, 16, 5500);
-            Apartment twoRoomsBrooklyn = new Apartment(2, 38, 4200);
-            Apartment fourAndKitchenBronx = new Apartment(3, 78, 2500);
-
-            System.out.println(studioManhattan.larger(twoRoomsBrooklyn));
-            System.out.println(fourAndKitchenBronx.larger(studioManhattan));
-
-            System.out.println(studioManhattan.priceDifference(fourAndKitchenBronx));
-            System.out.println(fourAndKitchenBronx.priceDifference(studioManhattan));
-            System.out.println(twoRoomsBrooklyn.priceDifference(studioManhattan));
-
-            System.out.println(studioManhattan.moreExpensiveThan(twoRoomsBrooklyn));
-            System.out.println(twoRoomsBrooklyn.moreExpensiveThan(fourAndKitchenBronx));
-            System.out.println(fourAndKitchenBronx.moreExpensiveThan(twoRoomsBrooklyn));
+            Student pekka = new Student("Pekka Mikkola", "013141590");
+            System.out.println("name: " + pekka.getName());
+            System.out.println("studentnumber: " + pekka.getStudentNumber());
+            System.out.println(pekka);
         }
     }
