@@ -59,6 +59,12 @@ public class CashRegister {
         }
     }
 
+    public void loadMoneyToCard(LyyraCard card, double sum){
+        if(sum > 0){
+            card.loadMoney(sum);
+            this.cashInRegister += sum;
+        }
+    }
 
     public String toString() {
         return "money in register "+cashInRegister+" economical lunches sold: "+economicalSold+" gourmet lunches sold: "+gourmetSold;
