@@ -14,5 +14,16 @@ import java.util.*;
             System.out.println("the change was "  + theChange );
 
             System.out.println( unicafeExactum );
+
+            LyyraCard cardOfMairit = new LyyraCard(70);
+
+            boolean succeeded = unicafeExactum.payGourmet(cardOfMairit);
+            System.out.println("payment success: " + succeeded);
+            succeeded = unicafeExactum.payEconomical(cardOfMairit);
+            System.out.println("payment success: "+ succeeded);
+            succeeded = unicafeExactum.payEconomical(cardOfMairit);
+            System.out.println("payment success: "+ succeeded);
+
+            System.out.println( unicafeExactum );
         }
     }
