@@ -12,5 +12,9 @@ import java.util.*;
             System.out.println(studioManhattan.priceDifference(fourAndKitchenBronx));
             System.out.println(fourAndKitchenBronx.priceDifference(studioManhattan));
             System.out.println(twoRoomsBrooklyn.priceDifference(studioManhattan));
+
+            System.out.println(studioManhattan.moreExpensiveThan(twoRoomsBrooklyn));
+            System.out.println(twoRoomsBrooklyn.moreExpensiveThan(fourAndKitchenBronx));
+            System.out.println(fourAndKitchenBronx.moreExpensiveThan(twoRoomsBrooklyn));
         }
     }

@@ -22,4 +22,15 @@ public class Apartment {
 
         return Math.abs(thisPrice - otherApartmentPrice);
     }
+
+    public boolean moreExpensiveThan(Apartment otherApartment){
+        int thisPrice = this.pricePerSquareMeter * this.squareMeters;
+        int otherApartmentPrice = otherApartment.pricePerSquareMeter * otherApartment.squareMeters;
+
+        if(thisPrice > otherApartmentPrice){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }
