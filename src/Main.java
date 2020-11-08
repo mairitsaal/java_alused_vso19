@@ -2,30 +2,13 @@ import java.util.*;
 
     public class Main {
         public static void main(String[] args) {
-            ArrayList<Student> students = new ArrayList<Student>();
+            Clock clock = new Clock(23, 59, 50);
 
-            Scanner reader = new Scanner(System.in);
-            while (true){
-                System.out.print("name: ");
-                String name = reader.nextLine();
-                if(name.isEmpty()) {
-                    break;
-                }
-                System.out.print("studentnumber: ");
-                String studentNumber = reader.nextLine();
-                students.add(new Student(name, studentNumber));
-            }
-
-            for (Student student: students) {
-                System.out.println(student);
-            }
-            System.out.print("Give search term: ");
-            String search = reader.nextLine();
-            System.out.println("Result:");
-            for (Student student: students) {
-                if(student.getName().contains(search)){
-                    System.out.println(student);
-                }
+            int i = 0;
+            while( i < 20) {
+                System.out.println( clock );
+                clock.tick();
+                i++;
             }
         }
     }
