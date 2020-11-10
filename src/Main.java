@@ -2,34 +2,24 @@ import java.util.*;
 
     public class Main {
         public static void main(String[] args) {
-            int[] original = {1, 2, 3, 4};
-            int[] copied = copy(original);
-            int[] reverse = reverseCopy(original);
+            int tabeliSuurus = 10;
+            int rida = 0;
+            int veerg = 0;
 
-            // change the copied
-            copied[0] = 99;
+            for (rida = 0; rida < tabeliSuurus; rida++) {
 
-            // print both
-            System.out.println("original: " + Arrays.toString(original));
-            System.out.println("copied: " + Arrays.toString(copied));
-            System.out.println("reverse: " + Arrays.toString(reverse));
-        }
+                for (veerg = 0; veerg < tabeliSuurus; veerg++) {
 
+                    if (rida > veerg) {
 
-        public static int[] copy(int[] array) {
-            int[] copy = new int[array.length];
-            for (int i = 0; i < array.length; i++) {
-                copy[i] = array[i];
+                        System.out.print(tabeliSuurus - 1 - rida);
+                    } else {
+
+                        System.out.print(tabeliSuurus - 1 - veerg);
+                    }
+                }
+                System.out.println();
             }
-                return copy;
-        }
-        public static int[] reverseCopy(int[] array){
-            int[] newArray = new int[array.length];
-            for(int i = array.length-1, j = 0; i >= 0; i--){
-                newArray[j] = array[i];
-                j++;
-            }
-            return newArray;
         }
 
     }
